@@ -1,19 +1,19 @@
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     peugeot_508_PSE.setImage(img`
-        . . . . . . e e c c e e . . . . 
-        . . . . . e f 7 7 f f 7 e . . . 
-        . . . . f c f f f 7 7 f c f . . 
-        . . . e f c f f 7 f f f c f e . 
-        . . . f 7 f f 7 f 7 f f c 7 f . 
-        . . . f 7 f f 7 7 7 7 f f 7 f . 
-        . . . f 7 f f f f f f f f 7 f . 
-        . . . f 7 c f f f f f f c 7 f . 
-        . . . f f c f c c c c f c f f . 
-        . . . f f f c b b b b c f f f . 
-        . . . f f f b b b b b b f f f . 
+        . . . . . . f f c c f f . . . . 
+        . . . . . f f f 7 7 f 7 f . . . 
+        . . . . f f f 7 f f 7 f f f . . 
+        . . . f f f f f 7 f f f f f f . 
+        . . . f f f f 7 f 7 f f f f f . 
+        . . . 7 7 f f 7 7 7 7 f f 7 f . 
+        . . . f f f f f f f f f f f 7 . 
+        . . . f f f f f f f f f f 7 f . 
+        . . . 7 7 f f c c c c f f f 7 . 
+        . . . 7 7 f c b b b b c f 7 f . 
+        . . . 7 7 f b b b b b b f f 7 . 
         . . . f f f f f f f f f f f f . 
-        . . . f f d f f f f f f d f f . 
-        . . . f f 2 d f f f f d 2 f f . 
+        . . . f f d f f 7 7 f f d f f . 
+        . . . f f 2 d 7 7 7 7 d 2 f f . 
         . . . f f f f f f f f f f f f . 
         . . . . f f . . . . . . f f . . 
         `)
@@ -79,9 +79,23 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
         `)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile5`, function (sprite, location) {
-    tiles.setCurrentTilemap(tilemap`level2`)
+    Current_Road += 1
+    if (Current_Road == 0) {
+        tiles.setCurrentTilemap(tilemap`level0`)
+    }
+    if (Current_Road == 1) {
+        tiles.setCurrentTilemap(tilemap`level2`)
+    }
+    if (Current_Road == 2) {
+        tiles.setCurrentTilemap(tilemap`level5`)
+    }
+    if (Current_Road == 3) {
+        game.gameOver(true)
+    }
 })
 let peugeot_508_PSE: Sprite = null
+let Current_Road = 0
+Current_Road = 0
 peugeot_508_PSE = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . f f f f f f f f . . . . 
