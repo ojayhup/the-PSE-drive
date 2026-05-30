@@ -23,8 +23,9 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     if (sport_mode == 1) {
         game.showLongText("Sport Mode : off", DialogLayout.Top)
         controller.moveSprite(peugeot_508_PSE, 200, 200)
-    } else {
-        game.showLongText("Sport Mode IS already OFF press A to turn it ON", DialogLayout.Top)
+    }
+    if (sport_mode == 2) {
+        game.showLongText("Sport Mode IS already OFF press A twice to turn it ON", DialogLayout.Top)
     }
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -32,8 +33,9 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (sport_mode == 1) {
         game.showLongText("Sport Mode : on", DialogLayout.Top)
         controller.moveSprite(peugeot_508_PSE, 500, 500)
-    } else {
-        game.showLongText("Sport Mode IS already ON press B to turn it off", DialogLayout.Top)
+    }
+    if (sport_mode == 2) {
+        game.showLongText("Sport Mode IS already ON press B twice to turn it off", DialogLayout.Top)
     }
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
