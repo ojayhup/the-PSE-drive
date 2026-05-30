@@ -233,6 +233,25 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile5`, function (sprite, l
             7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
             7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
             `)
+        peugeot_508_PSE.setImage(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `)
+        tiles.setCurrentTilemap(tilemap`level6`)
         game.showLongText("about this game", DialogLayout.Bottom)
         game.showLongText("this game was made from the good car brand called Peugeot and the sport company ", DialogLayout.Bottom)
         game.showLongText("the new Peugeot 508 PSE is a station wagon or sedan put enjenered by Peugeot sport", DialogLayout.Bottom)
